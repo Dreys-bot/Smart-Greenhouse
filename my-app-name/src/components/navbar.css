@@ -1,0 +1,123 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    padding-left: 2rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-left: auto;
+    padding-right: 2rem;
+}
+
+.navbar-left h1 {
+    margin: 0;
+    color: #000;
+}
+
+.alert-button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: #2d2d2d;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.alert-button:hover {
+    background-color: #3d3d3d;
+}
+
+.bell-icon,
+.arrow-icon {
+    stroke: white;
+}
+
+.sector-selector {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.sector-selector label {
+    color: #000;
+    font-size: 14px;
+}
+
+.sector-dropdown {
+    padding: 0.5rem 1rem;
+    background-color: #e0e0e0;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #000;
+}
+
+
+/* Responsive pour tablettes */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 1rem;
+        flex-wrap: wrap;
+    }
+    
+    .navbar-left h1 {
+        font-size: 1.2rem;
+    }
+    
+    .navbar-right {
+        gap: 1rem;
+    }
+    
+    .alert-button {
+        padding: 0.4rem 0.8rem;
+        font-size: 12px;
+    }
+    
+    .alert-button span {
+        display: none; /* Cache le texte sur petits écrans */
+    }
+    
+    .sector-selector label {
+        font-size: 12px;
+    }
+    
+    .sector-dropdown {
+        padding: 0.4rem 0.8rem;
+        font-size: 12px;
+    }
+}
+
+/* Responsive pour mobiles */
+@media (max-width: 480px) {
+    .navbar {
+        padding: 0.75rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    
+    .navbar-right {
+        width: 100%;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    
+    .alert-button span {
+        display: inline; /* Réaffiche le texte si espace disponible */
+    }
+    
+    .sector-selector {
+        flex: 1;
+        min-width: 150px;
+    }
+}
