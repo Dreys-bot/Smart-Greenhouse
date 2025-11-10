@@ -101,6 +101,42 @@ const reportRows = [
     harvest: 'Nov 23 (43 Days)',
     moisture: '72%',
   },
+  {
+    date: '04 Oct 25',
+    plant: 'Spinach',
+    area: 'Garden Q2',
+    health: '89%',
+    status: 'Good',
+    harvest: 'Nov 22 (42 Days)',
+    moisture: '73%',
+  },
+  {
+    date: '05 Oct 25',
+    plant: 'Kale',
+    area: 'Garden Q1',
+    health: '87%',
+    status: 'High',
+    harvest: 'Nov 19 (39 Days)',
+    moisture: '68%',
+  },
+  {
+    date: '06 Oct 25',
+    plant: 'Lettuce',
+    area: 'Garden Q3',
+    health: '82%',
+    status: 'Ph',
+    harvest: 'Nov 16 (36 Days)',
+    moisture: '65%',
+  },
+  {
+    date: '07 Oct 25',
+    plant: 'Tomato',
+    area: 'Greenhouse A1',
+    health: '78%',
+    status: 'Error',
+    harvest: 'Nov 12 (32 Days)',
+    moisture: '61%',
+  },
 ]
 
 export default function ReportLayout({ activeId, onSelect }: ReportLayoutProps) {
@@ -133,7 +169,7 @@ export default function ReportLayout({ activeId, onSelect }: ReportLayoutProps) 
           </section>
 
           <section className="report-main-grid fade-in delay-4">
-            <article className="report-chart-card">
+            <article className="report-trends-card">
               <header className="report-section-header">
                 <span className="report-section-title">Plants Health Trends</span>
                 <button type="button" className="report-icon-button" aria-label="Open chart options">
@@ -421,6 +457,15 @@ function ChartSVG() {
         <text x="70" y="163">40%</text>
         <text x="70" y="203">20%</text>
         <text x="70" y="220">0%</text>
+      </g>
+      <g fill="#8f8f8f" fontSize="10" fontWeight="600" textAnchor="middle">
+        <text x="110" y="212">1 Oct</text>
+        <text x="170" y="212">2 Oct</text>
+        <text x="230" y="212">3 Oct</text>
+        <text x="290" y="212">4 Oct</text>
+        <text x="350" y="212">5 Oct</text>
+        <text x="410" y="212">6 Oct</text>
+        <text x="470" y="212">7 Oct</text>
       </g>
       <path
         d="M30 170C70 140 90 110 130 120C170 130 190 80 230 90C270 100 290 150 330 140C370 130 390 100 430 110C470 120 490 90 530 100V200H30Z"
